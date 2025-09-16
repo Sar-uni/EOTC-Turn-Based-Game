@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bu4fotf4sih18"]
+
+[ext_resource type="FontFile" uid="uid://bmn30fsmcapbv" path="res://Assets/CENTAUR.TTF" id="1_sr004"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cg1xy"]
+bg_color = Color(0, 0, 0, 0.717647)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sr004"]
+bg_color = Color(0, 0, 0, 0.619608)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3uf43"]
+bg_color = Color(0, 0, 0, 0.611765)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnlj1"]
+content_margin_top = 20.0
+bg_color = Color(0, 0, 0, 0.796078)
+border_width_bottom = 60
+border_color = Color(0, 0, 0, 0.109804)
+border_blend = true
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+
+[resource]
+default_font = ExtResource("1_sr004")
+default_font_size = 25
+Button/styles/hover = SubResource("StyleBoxFlat_cg1xy")
+Button/styles/normal = SubResource("StyleBoxFlat_sr004")
+Button/styles/pressed = SubResource("StyleBoxFlat_3uf43")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_mnlj1")

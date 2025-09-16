@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxw7do6bfrw1"]
+
+[ext_resource type="Script" uid="uid://cgmwc5rnlm4cw" path="res://mainmenu.gd" id="1_7uvds"]
+[ext_resource type="Texture2D" uid="uid://cux0wjs014cy4" path="res://Assets/space.png" id="2_7uvds"]
+[ext_resource type="Texture2D" uid="uid://cdgn3r6pwu2ue" path="res://Assets/bar.png" id="2_wgsso"]
+[ext_resource type="Texture2D" uid="uid://cbyqg004u5byp" path="res://Assets/cow2.png" id="3_3pujl"]
+[ext_resource type="FontFile" uid="uid://bmn30fsmcapbv" path="res://Assets/CENTAUR.TTF" id="4_7uvds"]
+[ext_resource type="FontFile" uid="uid://cylj34fgygx18" path="res://Assets/CASTELAR.TTF" id="5_at6rn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7uvds")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1280, 780)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7uvds")
+stretch_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_direction = 3
+layout_mode = 2
+offset_left = 45.0
+offset_top = 638.0
+offset_right = 1325.0
+offset_bottom = 710.0
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "EXIT"
+icon = ExtResource("2_wgsso")
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "CHARACTER"
+icon = ExtResource("2_wgsso")
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "ARCHIVE"
+icon = ExtResource("2_wgsso")
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "START"
+icon = ExtResource("2_wgsso")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -158.0
+offset_top = 60.0
+offset_right = 368.0
+offset_bottom = 554.0
+grow_horizontal = 2
+texture = ExtResource("3_3pujl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 165.0
+offset_right = 566.0
+offset_bottom = 586.0
+theme_override_colors/default_color = Color(1, 1, 1, 0.458824)
+theme_override_fonts/normal_font = ExtResource("4_7uvds")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+"
+scroll_active = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.0
+offset_top = 55.0
+offset_right = 358.0
+offset_bottom = 159.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("5_at6rn")
+theme_override_font_sizes/font_size = 60
+text = "GAME TITEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button4" to="." method="_on_button_4_pressed"]

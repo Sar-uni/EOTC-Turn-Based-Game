@@ -1,0 +1,11 @@
+[
+  { "speaker": "Alice", "text": "Hi there! [wave]How are you today?[/wave]","sprite": "res://Assets/sprites/alice_nue.png","bg": "res://Assets/backgrounds/snowyforest.png" },
+  { "speaker": "Bob", "text": "I'm good, thanks for asking!", "sprite": "res://Assets/sprites/bob_nue.png" },
+  { "speaker": "Bob", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "sprite": "res://Assets/sprites/bob_nue.png" },
+  { "speaker": "Alice", "text": "Shall we go on an [pulse freq=1.0 color=#ffffff40 ease=-2.0]adventure?[/pulse]", "sprite": "res://Assets/sprites/alice_nue.png" },
+  { "speaker": "Jakey", "text": "[tornado radius=10.0 freq=1.0 connected=1]Tornado!!!![/tornado]", "sprite": "res://Assets/sprites/npc_nue.png" , "bg": "res://Assets/backgrounds/subway.png"},
+  { "speaker": "Jakey", "text": "we are doomed", "sprite": "", "bg": "res://Assets/backgrounds/back.png"},
+  { "speaker": "Jakey", "text": "Aaaaaaaaaaaaaaaaaaaaaaaaaaa", "sprite": "",},
+  { "speaker": "Jakey", "text": "[shake rate=20.0 level=5 connected=1]AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA[/shake]", "sprite": "",},
+  { "speaker": "Alice", "text": "So? [rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0][fade start=4 length=14]WHats your answer?[/fade][/rainbow]","sprite": "res://Assets/sprites/alice_nue.png","bg": "res://Assets/backgrounds/snowyforest.png" }
+]

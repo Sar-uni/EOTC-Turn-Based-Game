@@ -1,0 +1,265 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccvibitigwtnv"]
+
+[ext_resource type="Script" uid="uid://cswsqgyahtbdg" path="res://vntemplate.gd" id="1_s7vog"]
+[ext_resource type="Texture2D" uid="uid://kc0djcsu7nij" path="res://Assets/sprites/bob_nue.png" id="2_mnlj1"]
+[ext_resource type="Theme" uid="uid://bu4fotf4sih18" path="res://VNtemplate.tres" id="3_l64or"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l64or"]
+bg_color = Color(0, 0, 0, 1)
+border_width_right = 105
+border_color = Color(0, 0, 0, 0.0235294)
+border_blend = true
+corner_radius_top_left = 80
+expand_margin_left = 30.0
+
+[sub_resource type="Animation" id="Animation_s7vog"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l64or"]
+resource_name = "fadetoblack"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lomof"]
+resource_name = "fadetonormal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333333, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n4nqt"]
+_data = {
+&"RESET": SubResource("Animation_s7vog"),
+&"fadetoblack": SubResource("Animation_l64or"),
+&"fadetonormal": SubResource("Animation_lomof")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s7vog")
+
+[node name="bg" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1280, 780)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Character" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="chara1" type="Node2D" parent="Character"]
+
+[node name="TextureRect" type="TextureRect" parent="Character/chara1"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -522.0
+offset_top = -364.0
+offset_right = 502.0
+offset_bottom = 660.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 6
+
+[node name="Character2" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="chara1" type="Node2D" parent="Character2"]
+
+[node name="TextureRect" type="TextureRect" parent="Character2/chara1"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -522.0
+offset_top = -364.0
+offset_right = 502.0
+offset_bottom = 660.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mnlj1")
+
+[node name="Character3" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="chara1" type="Node2D" parent="Character3"]
+
+[node name="TextureRect" type="TextureRect" parent="Character3/chara1"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -522.0
+offset_top = -364.0
+offset_right = 502.0
+offset_bottom = 660.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 2
+
+[node name="name" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = -264.0
+offset_right = 309.0
+offset_bottom = -220.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_l64or")
+
+[node name="Label" type="Label" parent="name"]
+layout_mode = 2
+theme = ExtResource("3_l64or")
+text = "Name"
+
+[node name="dialouge" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -218.0
+offset_right = -15.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_l64or")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialouge"]
+layout_mode = 2
+bbcode_enabled = true
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -219.0
+offset_top = -74.0
+offset_right = -11.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_l64or")
+theme_override_constants/separation = 20
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 22
+text = "button"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 22
+text = "button"
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 22
+text = "button"
+
+[node name="transition" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="transition"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="transition"]
+libraries = {
+&"": SubResource("AnimationLibrary_n4nqt")
+}
+
+[node name="ColorRect2" type="ColorRect" parent="transition"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
